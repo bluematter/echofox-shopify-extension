@@ -1,0 +1,24 @@
+<script async src="https://www.echofox.io/api/integration/shopify/config?app_id={{ block.settings.app_id }}&bot_id={{ block.settings.bot_id }}"></script>
+
+{% schema %}
+{
+  "name": "EchoFox Script Injection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "app_id",
+      "info": "Your App ID is provided when you register your app with EchoFox inside Shopify integration settings.",
+      "label": "App ID",
+      "default": "Enter your App ID"
+    },
+    {
+      "type": "text",
+      "id": "bot_id",
+      "info": "Your Bot ID is provided when you register your app with EchoFox inside Shopify integration settings.",
+      "label": "Bot ID",
+      "default": "Enter your Bot ID"
+    }
+  ],
+  "target": "body"
+}
+{% endschema %}

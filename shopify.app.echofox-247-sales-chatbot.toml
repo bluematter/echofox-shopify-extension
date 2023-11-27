@@ -1,0 +1,25 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "EchoFox - 24/7 Sales Chatbot"
+client_id = "fcb8fd1dc11a10d4a509fb6d5164ee92"
+application_url = "https://www.echofox.io/integrations/shopify"
+embedded = false
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [ "https://www.echofox.io/auth/shopify/callback" ]
+
+[webhooks]
+api_version = "2023-10"
+
+  [webhooks.privacy_compliance]
+  customer_deletion_url = "https://www.echofox.io/api/integration/shopify/redactCustomer"
+  customer_data_request_url = "https://www.echofox.io/api/integration/shopify/dataRequest"
+  shop_deletion_url = "https://www.echofox.io/api/integration/shopify/redactShop"
+
+[pos]
+embedded = false
