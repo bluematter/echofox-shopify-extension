@@ -1,0 +1,20 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "EchoFox Local"
+client_id = "23815cb8cb4a7842843338d427b0c08b"
+application_url = "http://localhost:3000/integrations/shopify"
+embedded = false
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [ "http://localhost:3000/auth/shopify/callback" ]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
